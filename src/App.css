@@ -1,0 +1,12 @@
+/*Hover Effect*/
+
+.specification:hover,
+.plans:hover {
+  transform: scale(1.06);
+  transition: all 0.6s;
+  cursor: pointer;
+}
+.specification,
+.plans {
+  transition: all 0.6s;
+}

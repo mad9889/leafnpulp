@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"], // This is important
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Quicksand", "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };
