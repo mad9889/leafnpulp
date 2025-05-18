@@ -20,8 +20,8 @@ const Header = () => {
           <a href="#packages" className="hover:text-green-600">
             Packages
           </a>
-          <a href="#nutrition" className="hover:text-green-600">
-            Nutrition
+          <a href="#menu-nutrition" className="hover:text-green-600">
+            Menu
           </a>
         </div>
       </nav>
