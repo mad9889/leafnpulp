@@ -38,33 +38,23 @@ import BlueBeShImg from "./images/bluebesh.jpg";
 
 const pricingPackages = [
   {
-    name: "Starter",
-    price: "₹99",
+    name: "3 days",
+    price: "",
     color: "bg-purple-500",
-    features: ["Watermelon Juice", "Orange Juice", "Apple Juice"],
+    features: ["Juice = 149", "Salad = 200", "Shake = 99"],
   },
   {
-    name: "Business",
+    name: "7 days",
     price: "₹179",
     color: "bg-yellow-400",
     features: ["Beetroot Juice", "Spinach Juice", "Custom Plan"],
     highlight: true,
   },
   {
-    name: "Professional",
+    name: "14 days",
     price: "₹299",
     color: "bg-blue-400",
     features: ["All Juices", "Priority Delivery", "Free Bottle"],
-  },
-  {
-    name: "Premium",
-    price: "₹399",
-    color: "bg-pink-500",
-    features: [
-      "All Juices Daily",
-      "Weekly Detox Combo",
-      "Free Subscription Gift",
-    ],
   },
 ];
 
