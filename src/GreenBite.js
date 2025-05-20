@@ -7,11 +7,9 @@ import "slick-carousel/slick/slick-theme.css";
 
 import Header from "./components/ui/Header";
 // juices
-import AmlaImg from "./images/amla.jpeg";
-import BeetImg from "./images/beet.jpeg";
 import OrangeImg from "./images/orange.jpeg";
 import BeetCarrotImg from "./images/beetcarrot.jpg";
-import AppleImg from "./images/apple.jpeg";
+import ABCImg from "./images/abc.jpg";
 import PinepleImg from "./images/Pineapple.jpg";
 import WaterBeetImg from "./images/watermelon-beet.jpg";
 import AppSpiImg from "./images/app-spi.jpg";
@@ -51,7 +49,7 @@ const pricingPackages = [
     highlight: true,
   },
   {
-    name: "14 days",
+    name: "15 days",
     price: "₹299",
     color: "bg-blue-400",
     features: ["All Juices", "Priority Delivery", "Free Bottle"],
@@ -63,8 +61,15 @@ const menuData = [
     category: "Juices",
     items: [
       {
-        name: "Pineapple Splash",
-        ingredients: "Pineapple",
+        name: "ABC Elixir",
+        ingredients: "Apple, Beetroot, Carrot",
+        img: ABCImg,
+        nutrients: "Vitamin C, Manganese, Bromelain",
+        benefits: "Immunity boost, digestion, anti-inflammatory",
+      },
+      {
+        name: "CarriPine Bliss",
+        ingredients: "Pineapple, Carrot",
         img: PinepleImg,
         nutrients: "Vitamin C, Manganese, Bromelain",
         benefits: "Immunity boost, digestion, anti-inflammatory",
@@ -91,8 +96,8 @@ const menuData = [
         benefits: "Cooling, hydration, skin health, alkalizing",
       },
       {
-        name: "Orange",
-        ingredients: "Orange",
+        name: "Golden Harvest",
+        ingredients: "Orange, Carrot",
         img: OrangeImg,
         nutrients: "Vitamin C, Folate, Thiamine",
         benefits: "Immunity boost, collagen production, heart health",
@@ -110,35 +115,35 @@ const menuData = [
     category: "Salads",
     items: [
       {
-        name: "Chickpea & Cucumber Spicy",
+        name: "Chickpea & Cucumber",
         ingredients: "Chickpeas, Cucumber, Spices",
         img: ChiCuImg,
         nutrients: "Protein, Fiber, Vitamin K, Phytonutrients",
         benefits: "Digestive health, muscle repair, blood sugar control",
       },
       {
-        name: "Cashew Creamy",
-        ingredients: "Cashews, Yogurt, Vegetables",
+        name: "Cashew Cheesy",
+        ingredients: "Cashew Cream, Vegetables",
         img: CreCasImg,
         nutrients: "Healthy Fats, Protein, Calcium, Magnesium",
         benefits: "Brain health, satiety, bone strength",
       },
       {
-        name: "Waldorf",
+        name: "Waldorf Charm",
         ingredients: "Apple, Walnuts, Celery, Grapes",
         img: WaldorfImg,
         nutrients: "Omega-3s, Fiber, Vitamin C, Antioxidants",
         benefits: "Heart health, metabolism boost, cognitive function",
       },
       {
-        name: "Corn & Paneer Spicy",
+        name: "Corn & Paneer",
         ingredients: "Sweet Corn, Paneer, Spices",
         img: CorPanImg,
         nutrients: "Protein, Calcium, Zeaxanthin, Fiber",
         benefits: "Muscle building, eye health, energy",
       },
       {
-        name: "Fruit & Nut",
+        name: "Fruit & Nut Bliss",
         ingredients: "Mixed Fruits, Nuts",
         img: FruNutImg,
         nutrients: "Vitamins A-C, Healthy Fats, Fiber",
@@ -146,13 +151,13 @@ const menuData = [
       },
       {
         name: "Purple-Green Spicy",
-        ingredients: "Purple Cabbage, Greens, Spices",
+        ingredients: "Beetroot, Greens, Spices",
         img: PurGreImg,
         nutrients: "Anthocyanins, Vitamin K, Sulforaphane",
         benefits: "Anti-inflammatory, detoxification, gut health",
       },
       {
-        name: "Fresh-Veggies Spicy",
+        name: "Fresh-Veggies",
         ingredients: "Mixed Vegetables, Spices",
         img: FreVegImg,
         nutrients: "Fiber, Vitamin C, Phytonutrients",
@@ -164,22 +169,22 @@ const menuData = [
     category: "Shakes",
     items: [
       {
-        name: "Banana Almond Buzz",
-        ingredients: "Banana, Almonds, Milk",
+        name: "Banana Buzz",
+        ingredients: "Banana, Date , Milk",
         img: BanAlmImg,
         nutrients: "Potassium, Protein, Vitamin E, Magnesium",
         benefits: "Muscle recovery, heart health, natural energy",
       },
       {
         name: "Mango Magic",
-        ingredients: "Mango, Yogurt",
+        ingredients: "Mango, Milk",
         img: ManLasiImg,
         nutrients: "Vitamin A, Calcium, Probiotics, Vitamin C",
         benefits: "Gut health, hydration, skin glow",
       },
       {
-        name: "Protein Shake",
-        ingredients: "Protein Powder, Milk/Nut Milk",
+        name: "Pineapple Splash",
+        ingredients: "Pineapple, Milk/Nut Milk",
         img: ProtImg,
         nutrients: "Complete Protein, BCAAs, Calcium",
         benefits: "Muscle growth, recovery, satiety",
