@@ -28,7 +28,7 @@ import FreVegImg from "./images/freveg.jpeg";
 //shakes
 import ManLasiImg from "./images/manlasii.jpg";
 import BanAlmImg from "./images/banalmond.jpg";
-import ProtImg from "./images/chocPro.jpg";
+import PineShaImg from "./images/pineshake.jpg";
 import ChicShImg from "./images/chicush.jpg";
 import DryFruShImg from "./images/dryfruitsh.jpeg";
 import AppleCrunImg from "./images/aplSh.jpeg";
@@ -185,7 +185,7 @@ const menuData = [
       {
         name: "Pineapple Splash",
         ingredients: "Pineapple, Milk/Nut Milk",
-        img: ProtImg,
+        img: PineShaImg,
         nutrients: "Complete Protein, BCAAs, Calcium",
         benefits: "Muscle growth, recovery, satiety",
       },
@@ -280,12 +280,12 @@ export default function GreenBiteLandingPage() {
                   <div className="flex items-center text-sm mb-1">
                     <FaLeaf className="text-green-500 mr-2" />
                     <span className="font-medium">Nutrients:</span>
-                    <span className="ml-1">{item.nutrients}</span>
+                    <span className="ml-1 mt-1">{item.nutrients}</span>
                   </div>
-                  <div className="flex items-center text-sm">
+                  <div className="flex items-center text-sm mt-2">
                     <FaHeart className="text-green-500 mr-2" />
                     <span className="font-medium">Benefits:</span>
-                    <span className="ml-1">{item.benefits}</span>
+                    <span className="ml-1 mt-1">{item.benefits}</span>
                   </div>
                 </div>
               </div>
