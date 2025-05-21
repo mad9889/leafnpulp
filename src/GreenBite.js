@@ -37,22 +37,29 @@ import BlueBeShImg from "./images/bluebesh.jpg";
 const pricingPackages = [
   {
     name: "3 days",
-    price: "",
-    color: "bg-purple-500",
-    features: ["Juice = 149", "Salad = 200", "Shake = 99"],
+    price: "₹149/day",
+    color: "bg-gradient-to-br from-purple-400 to-purple-300",
+    features: ["Juice = ₹149", "Salad = ₹200", "Shake = ₹99"],
   },
   {
     name: "7 days",
-    price: "₹179",
-    color: "bg-yellow-400",
+    price: "₹179/day",
+    color: "bg-gradient-to-br from-green-400 to-green-600",
     features: ["Beetroot Juice", "Spinach Juice", "Custom Plan"],
     highlight: true,
+    badge: "Most Popular",
   },
   {
     name: "15 days",
-    price: "₹299",
-    color: "bg-blue-400",
+    price: "₹199/day",
+    color: "bg-gradient-to-br from-yellow-300 via-yellow-500 to-yellow-400",
     features: ["All Juices", "Priority Delivery", "Free Bottle"],
+  },
+  {
+    name: "30 days",
+    price: "₹159/day",
+    color: "bg-gradient-to-br from-blue-200 to-blue-500",
+    features: ["Full Menu Access", "Free Wellness Guide", "24/7 Support"],
   },
 ];
 
@@ -248,7 +255,7 @@ export default function GreenBiteLandingPage() {
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 8000,
     pauseOnHover: true,
   };
 
