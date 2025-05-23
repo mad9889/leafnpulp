@@ -32,23 +32,9 @@ const Header = () => {
           Fresh. Clean. Nourishing – Delivered Daily.
         </h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Cold-pressed juices, wholesome salads & power sprouts – made for your
-          health.
+          Cold-pressed juices, wholesome salads & power smoothies – made for
+          your health.
         </p>
-        <div className="flex justify-center gap-4 flex-wrap">
-          <button
-            className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl shadow"
-            onClick={handleWhatsAppClick}
-          >
-            📲 Order via WhatsApp
-          </button>
-          <a
-            href="#packages"
-            className="px-6 py-3 border border-green-600 text-green-600 rounded-xl hover:bg-green-50"
-          >
-            📥 View Packages
-          </a>
-        </div>
       </section>
     </div>
   );
