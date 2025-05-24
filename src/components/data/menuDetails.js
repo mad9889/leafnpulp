@@ -1,29 +1,29 @@
 // juices
-import OrangeImg from "../../images/orange.jpeg";
+import OrangeImg from "../../images/goldenHar.jpg";
 import BeetCarrotImg from "../../images/beetcarrot.jpg";
-import ABCImg from "../../images/abc.jpg";
+import ABCImg from "../../images/apbc.jpg";
 import PinepleImg from "../../images/Pineapple.jpg";
-import WaterBeetImg from "../../images/watermelon-beet.jpg";
+import WaterBeetImg from "../../images/hydrela.jpg";
 import AppSpiImg from "../../images/app-spi.jpg";
-import CucumberImg from "../../images/cucumber.jpeg";
+import CucumberImg from "../../images/glori.jpg";
 
 //Salad
-import ChiCuImg from "../../images/chicu.jpeg";
+import ChiCuImg from "../../images/chicsal.jpg";
 import CreCasImg from "../../images/crecash.jpg";
 import WaldorfImg from "../../images/waldrof.jpg";
 import CorPanImg from "../../images/corpan.jpg";
 import FruNutImg from "../../images/frunut.jpg";
-import PurGreImg from "../../images/purgre.jpg";
-import FreVegImg from "../../images/freveg.jpeg";
+import PurGreImg from "../../images/purpg.jpg";
+import FreVegImg from "../../images/freshveg.jpg";
 
 //shakes
-import ManLasiImg from "../../images/manlasii.jpg";
+import ManLasiImg from "../../images/mngsh.jpg";
 import BanAlmImg from "../../images/banalmond.jpg";
-import PineShaImg from "../../images/pineshake.jpg";
-import ChicShImg from "../../images/chicush.jpg";
-import DryFruShImg from "../../images/dryfruitsh.jpeg";
-import AppleCrunImg from "../../images/aplSh.jpeg";
-import BlueBeShImg from "../../images/bluebesh.jpg";
+import PineShaImg from "../../images/pinshake.jpg";
+import ChicShImg from "../../images/chikku.jpg";
+import DryFruShImg from "../../images/powerdry.jpg";
+import AppleCrunImg from "../../images/applcru.jpg";
+import BlueBeShImg from "../../images/blueber.jpg";
 
 const menuData = [
   {

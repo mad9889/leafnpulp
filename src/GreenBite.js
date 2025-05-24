@@ -8,8 +8,9 @@ import "slick-carousel/slick/slick-theme.css";
 import Header from "./components/ui/Header";
 import menuData from "./components/data/menuDetails";
 import {
-  FaCheck,
+  FaMapMarkerAlt,
   FaArrowUp,
+  FaInstagram,
   FaLeaf,
   FaHeart,
   FaTimes,
@@ -17,7 +18,9 @@ import {
   FaShieldAlt,
   FaStar,
   FaTruck,
+  FaYoutube,
 } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 const packagesData = [
   {
@@ -97,11 +100,21 @@ const packagesData = [
       {
         price: "₹1049/person",
         name: "Juice&Salad",
+        features: [
+          "Same as 7 days Juices",
+          "Same as 7 days Salads",
+          "Customization Availability",
+        ],
         color: "bg-gradient-to-br from-purple-400 to-purple-300",
       },
       {
         price: "₹879/person",
         name: "Juice&Shake",
+        features: [
+          "Same as 7 days Juices",
+          "Same as 7 days Shakes",
+          "Customization Availability",
+        ],
         color: "bg-gradient-to-br from-green-400 to-green-500",
       },
     ],
@@ -416,22 +429,62 @@ export default function GreenBiteLandingPage() {
           </div>
 
           {/* Trust Indicators */}
-          <div className="mt-12 flex flex-wrap justify-center items-center gap-6">
-            <div className="flex items-center">
-              <FaShieldAlt className="text-green-500 mr-2" />
-              <span className="text-sm">FSSAI Certified</span>
-            </div>
-            <div className="flex items-center">
-              <FaStar className="text-yellow-400 mr-2" />
-              <span className="text-sm">4.9/5 (100+ Reviews)</span>
-            </div>
-            <div className="flex items-center">
-              <FaTruck className="text-green-500 mr-2" />
-              <span className="text-sm">
-                Free Delivery Promise <br />
-                <span className="text-xs">(in 4km range)</span>
-              </span>
-            </div>
+          {/* Replace current trust indicators with this */}
+          <div className="mt-12">
+            <h4 className="text-lg font-semibold mb-6 text-green-700">
+              Why Customers Love Us
+            </h4>
+
+            <Slider
+              {...{
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: isMobile ? 1 : 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                arrows: !isMobile,
+              }}
+            >
+              {[
+                {
+                  icon: <FaStar className="text-yellow-400 text-3xl mb-3" />,
+                  title: "4.9/5 Stars",
+                  text: "100+ happy customers",
+                },
+                {
+                  icon: <FaTruck className="text-green-500 text-3xl mb-3" />,
+                  title: "Free Delivery",
+                  text: "Around 4km Range ",
+                },
+                {
+                  icon: <FaShieldAlt className="text-blue-500 text-3xl mb-3" />,
+                  title: "Certified Quality",
+                  text: "FSSAI Approved",
+                },
+                {
+                  icon: (
+                    <FaRecycle className="text-emerald-500 text-3xl mb-3" />
+                  ),
+                  title: "Eco-Friendly",
+                  text: "Sustainable packaging",
+                },
+                {
+                  icon: <FaLeaf className="text-green-600 text-3xl mb-3" />,
+                  title: "100% Natural",
+                  text: "No artificial additives",
+                },
+              ].map((item, i) => (
+                <div key={i} className="px-4">
+                  <div className="bg-white p-6 rounded-xl shadow-sm text-center h-full">
+                    <div className="mx-auto w-max">{item.icon}</div>
+                    <h5 className="font-bold text-lg mb-1">{item.title}</h5>
+                    <p className="text-gray-600">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </Slider>
           </div>
         </div>
       </section>
@@ -446,8 +499,39 @@ export default function GreenBiteLandingPage() {
         </button>
       )}
 
+      {/* Google Maps Section */}
+      <section className="py-12 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h3 className="text-2xl font-bold text-center mb-8 text-green-700">
+            Visit Us
+          </h3>
+          <div className="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-lg">
+            <iframe
+              src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=sunspace%20apartment,%20adhmedabad+(Leaf%20%26%20Pulp)&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              title="Leaf & Pulp Location"
+            />
+          </div>
+          <div className="mt-4 text-center">
+            <a
+              href="https://maps.google.com?q=sunspace+apartment,+adhmedabad"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-green-600 hover:text-green-800"
+            >
+              <FaMapMarkerAlt className="mr-2" />
+              Open in Google Maps
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
-      <footer className="bg-green-100 py-8 text-center">
+      {/* <footer className="bg-green-100 py-8 text-center">
         <div className="max-w-6xl mx-auto px-4">
           <p className="text-gray-600 mb-2">
             © 2025 Leaf&Pulp. All rights reserved.
@@ -455,6 +539,47 @@ export default function GreenBiteLandingPage() {
           <p className="text-sm text-gray-500">
             Made with ❤️ for healthy living
           </p>
+          
+        </div>
+      </footer> */}
+      {/* Footer */}
+      <footer className="bg-green-100 py-8 text-center">
+        <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
+          <div className="text-center">
+            <h4 className="font-bold mb-2 text-green-700">Location</h4>
+            <address className="not-italic">
+              1, Radhe Provision,
+              <br />
+              Sunspace Apartment, Ramdev Nagar,
+              <br />
+              Satellite, Ahmedabad Gujrat (380015)
+            </address>
+            <p className="mt-2">Open: 7AM - 10PM Daily</p>
+          </div>
+          <div>
+            <p className="text-gray-600 mb-2">
+              © 2025 Leaf&Pulp. All rights reserved.
+            </p>
+            <p className="text-sm text-gray-500">
+              Made with ❤️ for healthy living
+            </p>
+          </div>
+          <div>
+            <h4 className="font-bold mb-2 text-green-700">Contact</h4>
+            <p>hello@leafnpulp.com</p>
+            <p>+91 98765 43210</p>
+            <div className="flex flex-wrap justify-center gap-2 mt-3">
+              <a href="">
+                <FaInstagram />
+              </a>
+              <a href="">
+                <FaSquareXTwitter />
+              </a>
+              <a href="">
+                <FaYoutube />
+              </a>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
