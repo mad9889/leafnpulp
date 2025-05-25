@@ -98,23 +98,15 @@ const packagesData = [
     category: "14 Days",
     items: [
       {
-        price: "₹1049/person",
+        price: "₹879/person",
         name: "Juice&Salad",
-        features: [
-          "Same as 7 days Juices",
-          "Same as 7 days Salads",
-          "Customization Availability",
-        ],
+        features: ["Same as 7 days Juices", "Same as 7 days Salads"],
         color: "bg-gradient-to-br from-purple-400 to-purple-300",
       },
       {
-        price: "₹879/person",
+        price: "₹1049/person",
         name: "Juice&Shake",
-        features: [
-          "Same as 7 days Juices",
-          "Same as 7 days Shakes",
-          "Customization Availability",
-        ],
+        features: ["Same as 7 days Juices", "Same as 7 days Shakes"],
         color: "bg-gradient-to-br from-green-400 to-green-500",
       },
     ],

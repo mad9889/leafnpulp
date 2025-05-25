@@ -3,7 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const Header = () => {
   const handleWhatsAppOrder = () => {
-    const whatsappNumber = "919876543210"; // Replace with your actual number
+    const whatsappNumber = process.env.REACT_APP_WHATSAPP_NUMBER;
     const message = encodeURIComponent(
       "Hi Leaf&Pulp! I'd like to place an order:\n\n" +
         "• Juice: ______\n" +
