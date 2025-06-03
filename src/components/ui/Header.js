@@ -3,16 +3,37 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const Header = () => {
   const handleWhatsAppOrder = () => {
-    const whatsappNumber = process.env.REACT_APP_WHATSAPP_NUMBER;
-    const message = encodeURIComponent(
-      "Hi Leaf&Pulp! I'd like to place an order:\n\n" +
-        "• Juice: ______\n" +
-        "• Salad: ______\n" +
-        "• Shake: ______\n\n" +
-        "Delivery to: ______\n" +
-        "Time: ______"
-    );
-    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, "_blank");
+    const fullNumber = process.env.REACT_APP_WHATSAPP_NUMBER;
+
+    if (!fullNumber) {
+      // console.error("WhatsApp number not configured in environment variables");
+      alert(
+        "Ordering service is currently unavailable. Please call us instead."
+      );
+      return;
+    }
+
+    // Clean the number (remove all non-digits)
+    const cleanedNumber = fullNumber.replace(/\D/g, "");
+
+    if (!cleanedNumber) {
+      console.error("Invalid WhatsApp number format");
+      return;
+    }
+
+    // Create the message template
+    const message = `Hey Leaf&Pulp Team! 🍃  
+I'm exploring your juices & salads. I'm Intrested in your plans.`;
+
+    // Generate the URL
+    const whatsappUrl = `https://wa.me/${cleanedNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    console.log("Attempting to open:", whatsappUrl); // Debug log
+
+    // Open WhatsApp
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   };
 
   return (

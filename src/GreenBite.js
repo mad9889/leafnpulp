@@ -127,6 +127,11 @@ export default function GreenBiteLandingPage() {
   const isMobile = useMediaQuery({ maxWidth: 568 });
 
   const currentItems = menuData.find((m) => m.category === selectedCat).items;
+  const [showGreeting, setShowGreeting] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => setShowGreeting(false), 4000);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
