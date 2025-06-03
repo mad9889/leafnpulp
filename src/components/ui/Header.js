@@ -3,7 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const Header = () => {
   const handleWhatsAppOrder = () => {
-    const fullNumber = process.env.REACT_APP_WHATSAPP_NUMBER;
+    const fullNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
 
     if (!fullNumber) {
       console.error("WhatsApp number not configured in environment variables");
