@@ -6,7 +6,7 @@ const Header = () => {
     const fullNumber = process.env.REACT_APP_WHATSAPP_NUMBER;
 
     if (!fullNumber) {
-      // console.error("WhatsApp number not configured in environment variables");
+      console.error("WhatsApp number not configured in environment variables");
       alert(
         "Ordering service is currently unavailable. Please call us instead."
       );
