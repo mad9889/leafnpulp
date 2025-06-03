@@ -3,7 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const Header = () => {
   const handleWhatsAppOrder = () => {
-    const fullNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
+    const fullNumber = process.env.REACT_APP_WHATSAPP_NUMBER;
 
     if (!fullNumber) {
       console.error("WhatsApp number not configured in environment variables");
@@ -21,18 +21,13 @@ const Header = () => {
       return;
     }
 
-    // Create the message template
     const message = `Hey Leaf&Pulp Team! 🍃  
-I'm exploring your juices & salads. I'm Intrested in your plans.`;
+I'm exploring your juices & salads. I'm interested in your plans.`;
 
-    // Generate the URL
     const whatsappUrl = `https://wa.me/${cleanedNumber}?text=${encodeURIComponent(
       message
     )}`;
 
-    console.log("Attempting to open:", whatsappUrl); // Debug log
-
-    // Open WhatsApp
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
   };
 
