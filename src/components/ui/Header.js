@@ -1,5 +1,7 @@
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
+import leafLogo from '../../images/leaf.png';
+import heroBg from "../../images/herosection-bg.jpg";
 
 const Header = () => {
   const handleWhatsAppOrder = () => {
@@ -34,24 +36,20 @@ I'm exploring your juices & salads. I'm interested in your plans.`;
   return (
     <div>
       {/* Top Navbar with Brand */}
-      <nav className="bg-white shadow-md py-4 px-6 sm:px-20 flex justify-between items-center">
+      <nav className="bg-white shadow-md py-4 px-6 sm:px-20 flex justify-between items-center flex">
         <h1 className="text-xl sm:text-2xl font-bold text-green-700 tracking-wider main-heading">
-          🍃 Leaf<span className="text-black">&</span>Pulp
+          <span className="inline-flex"><img src={leafLogo} width={23} /> </span> Leaf<span className="text-black">&</span>Pulp
         </h1>
-
-        {/* WhatsApp Order Button - Always Visible */}
-        {/* <button
-          onClick={handleWhatsAppOrder}
-          className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full transition-all"
-        >
-          <FaWhatsapp className="text-xl" />
-          <span className="hidden sm:inline">Order Now</span>
-        </button> */}
       </nav>
 
       {/* Hero Section with CTA */}
-      <section className="text-center py-16 sm:py-20 bg-gradient-to-r from-green-200 to-green-100">
-        <div className="max-w-4xl mx-auto px-4">
+      <section className="relative text-center py-16 sm:py-20 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBg})`
+
+}}
+      >
+          <div className="absolute inset-0 bg-white/60 sm:bg-white/50 backdrop-blur-xs"></div>
+        <div className="relative max-w-4xl mx-auto px-4">
           <h2 className="text-3xl sm:text-5xl font-bold mb-4">
             Fresh. Clean. Nourishing – Delivered Daily.
           </h2>
