@@ -35,18 +35,18 @@ I'm exploring your juices & salads. I'm interested in your plans.`;
     <div>
       {/* Top Navbar with Brand */}
       <nav className="bg-white shadow-md py-4 px-6 sm:px-20 flex justify-between items-center">
-        <h1 className="text-xl sm:text-2xl font-bold text-green-700 tracking-wider">
+        <h1 className="text-xl sm:text-2xl font-bold text-green-700 tracking-wider main-heading">
           🍃 Leaf<span className="text-black">&</span>Pulp
         </h1>
 
         {/* WhatsApp Order Button - Always Visible */}
-        <button
+        {/* <button
           onClick={handleWhatsAppOrder}
           className="flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full transition-all"
         >
           <FaWhatsapp className="text-xl" />
           <span className="hidden sm:inline">Order Now</span>
-        </button>
+        </button> */}
       </nav>
 
       {/* Hero Section with CTA */}

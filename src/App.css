@@ -1,6 +1,10 @@
 /*Hover Effect*/
 body {
-  font-family: "Lora", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.main-heading {
+  font-family: "Poppins", sans-serif;
 }
 
 .specification:hover,

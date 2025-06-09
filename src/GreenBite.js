@@ -27,19 +27,19 @@ const packagesData = [
     category: "3 Days",
     items: [
       {
-        price: "₹149/person",
+        price: "₹159/person",
         name: "Juices",
         features: ["Hydration Elation", "CarriPine Bliss", "Glorious Green"],
         color: "bg-gradient-to-br from-purple-400 to-purple-300",
       },
       {
-        price: "₹239/person",
+        price: "₹339/person",
         name: "Salads",
         features: ["Chickpea&Cucumber", "Waldorf", "Fresh Veggies"],
         color: "bg-gradient-to-br from-green-400 to-green-500",
       },
       {
-        price: "₹199/person",
+        price: "₹239/person",
         name: "Shakes",
         features: ["Mango Bliss", "Apple Crunch", "Banana Buzz"],
         color: "bg-gradient-to-br from-blue-200 to-blue-500",
@@ -50,7 +50,7 @@ const packagesData = [
     category: "7 Days",
     items: [
       {
-        price: "₹389/person",
+        price: "₹349/person",
         name: "Juices",
         features: [
           "ABC Elixir",
@@ -64,7 +64,7 @@ const packagesData = [
         color: "bg-gradient-to-br from-purple-400 to-purple-300",
       },
       {
-        price: "₹479/person",
+        price: "₹789/person",
         name: "Salads",
         color: "bg-gradient-to-br from-green-400 to-green-500",
 
@@ -79,7 +79,7 @@ const packagesData = [
         ],
       },
       {
-        price: "₹649/person",
+        price: "₹559/person",
         name: "Shakes",
         color: "bg-gradient-to-br from-blue-200 to-blue-500",
         features: [
@@ -98,16 +98,22 @@ const packagesData = [
     category: "14 Days",
     items: [
       {
-        price: "₹879/person",
+        price: "₹1099/person",
         name: "Juice&Salad",
         features: ["Same as 7 days Juices", "Same as 7 days Salads"],
         color: "bg-gradient-to-br from-purple-400 to-purple-300",
       },
       {
-        price: "₹1049/person",
+        price: "₹899/person",
         name: "Juice&Shake",
         features: ["Same as 7 days Juices", "Same as 7 days Shakes"],
         color: "bg-gradient-to-br from-green-400 to-green-500",
+      },
+      {
+        price: "₹1299/person",
+        name: "Shake&Salad",
+        color: "bg-gradient-to-br from-blue-200 to-blue-500",
+        features: ["Same as 7 days Salads", "Same as 7 days Shakes"],
       },
     ],
   },
@@ -564,7 +570,7 @@ export default function GreenBiteLandingPage() {
           <div>
             <h4 className="font-bold mb-2 text-green-700">Contact</h4>
             <p>hello@leafnpulp.com</p>
-            <p>+91 98765 43210</p>
+            <p>+91 9998258966</p>
             <div className="flex flex-wrap justify-center gap-2 mt-3">
               <a href="">
                 <FaInstagram />
