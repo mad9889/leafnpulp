@@ -128,6 +128,8 @@ const packageFeatures = {
 
 export default function GreenBiteLandingPage() {
   const [showTopBtn, setShowTopBtn] = useState(false);
+  const [showOfferPopup, setShowOfferPopup] = useState(false);
+  const [hasScrolledHalf, setHasScrolledHalf] = useState(false);
   const [selectedCat, setSelectedCat] = useState(menuData[0].category);
   const [selectedPack, setSelectedPack] = useState(packagesData[0].category);
   const isMobile = useMediaQuery({ maxWidth: 568 });
@@ -150,6 +152,15 @@ export default function GreenBiteLandingPage() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  useEffect(() => {
+  const timer = setTimeout(() => {
+    setShowOfferPopup(true);
+  }, 8000);
+
+  return () => clearTimeout(timer);
+}, []);
+
 
   const carouselSettings = {
     dots: true,
@@ -178,11 +189,11 @@ export default function GreenBiteLandingPage() {
               onClick={() => handleItemClick(item.name)}
             >
               {/* Image */}
-              <div className="h-48 overflow-hidden">
+              <div className="h-52 sm:h-56 overflow-hidden rounded-t-xl">
                 <img
                   src={item.img}
                   alt={item.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover block"
                 />
               </div>
 
@@ -192,7 +203,7 @@ export default function GreenBiteLandingPage() {
                   <h3 className="font-bold text-lg text-gray-800">
                     {item.name}
                   </h3>
-                  <span className="bg-green-100 text-green-800 text-sm px-2 py-1 rounded-full">
+                  <span className="bg-green-100 text-green-800 text-lg px-2 py-1 rounded-full">
                     {item.price || "₹149"}
                   </span>
                 </div>
@@ -201,7 +212,7 @@ export default function GreenBiteLandingPage() {
 
               {/* Nutrition Overlay (Conditional) */}
               {expandedItem === item.name && (
-                <div className="absolute inset-0 bg-white bg-opacity-95 p-6 flex flex-col justify-center animate-fadeIn">
+                <div className="absolute inset-0 bg-white bg-opacity-95 p-6 flex flex-col justify-center animate-fadeIn animate-fadeIn">
                   <div className="mb-4">
                     <div className="flex items-center text-green-600 mb-2">
                       <FaLeaf className="mr-2" />
@@ -241,7 +252,7 @@ export default function GreenBiteLandingPage() {
           key={item.name}
           className="group relative bg-white border border-green-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
         >
-          <div className="h-48 overflow-hidden">
+          <div className="h-52 overflow-hidden">
             <img
               src={item.img}
               alt={item.name}
@@ -571,6 +582,37 @@ export default function GreenBiteLandingPage() {
           </div>
         </div>
       </footer>
+
+      {/* Modal */}
+      {showOfferPopup && (
+      <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+        <div className=" relative bg-white p-6 rounded-xl max-w-md text-center shadow-lg">
+          {/* ✕ Close Button */}
+          <button
+            onClick={() => setShowOfferPopup(false)}
+            className="absolute top-2 right-3 text-gray-500 hover:text-gray-700 text-xl font-bold"
+            aria-label="Close"
+          >
+            ✕
+          </button>
+          <h3 className="text-2xl font-bold text-green-600 mb-4">🎁 Refer & Earn</h3>
+          <p className="text-gray-700 mb-4">
+            Invite 2 friends and get a juice or shake free!
+          </p>
+          <a
+              href={`https://wa.me/?text=${encodeURIComponent(
+                `Hey! 🍹 I found this awesome juice brand "Leaf & Pulp"! Get a free juice when you refer 2 friends. Try it here: https://leaf-pulp.vercel.app/`
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block mt-4 bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-full shadow-md transition-all"
+            >
+            Refer Now
+          </a>
+        </div>
+      </div>
+    )}
+
     </div>
   );
 }
