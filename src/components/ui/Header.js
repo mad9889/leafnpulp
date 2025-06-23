@@ -36,11 +36,15 @@ I'm exploring your juices & salads. I'm interested in your plans.`;
   return (
     <div>
       {/* Top Navbar with Brand */}
-      <nav className="bg-white shadow-md py-4 px-6 sm:px-20 flex justify-between items-center flex">
-        <h1 className="text-xl sm:text-2xl font-bold text-green-700 tracking-wider main-heading">
-          <span className="inline-flex"><img src={leafLogo} width={23} /> </span> Leaf<span className="text-black">&</span>Pulp
-        </h1>
+      <nav className="bg-white shadow-md px-4 py-2 sm:px-20 flex items-center justify-between">
+        <div className="flex items-center space-x-3">
+          <img src={leafLogo} alt="Leaf & Pulp Logo" className="h-5" />
+          <h1 className="text-xl sm:text-2xl font-bold text-green-700 tracking-wider">
+            Leaf<span className="text-black">&</span>Pulp
+          </h1>
+        </div>
       </nav>
+
 
       {/* Hero Section with CTA */}
       <section className="relative text-center py-16 sm:py-20 bg-cover bg-center bg-no-repeat"

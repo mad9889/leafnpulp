@@ -543,6 +543,36 @@ export default function GreenBiteLandingPage() {
           </div>
         </div>
       </section> 
+
+      <section className="py-12 px-4 bg-white border-t">
+      <div className="max-w-4xl mx-auto text-center">
+        <h3 className="text-2xl font-bold text-green-700 mb-6">Delivery & Service Terms</h3>
+        <div className="grid sm:grid-cols-2 gap-6 text-left text-sm text-gray-700">
+          <div className="bg-green-50 p-4 rounded-xl shadow-sm">
+            <h4 className="font-bold text-green-600 mb-2">With Subscription</h4>
+            <ul className="list-disc list-inside space-y-1">
+              <li>✅ Free delivery on all subscription orders</li>
+              <li>📦 Choose daily, weekly or custom plans</li>
+              <li>📍 Service available within 3-4 km of location</li>
+              <li>🕒 Delivery between 7 AM – 10 AM</li>
+            </ul>
+          </div>
+          <div className="bg-yellow-50 p-4 rounded-xl shadow-sm">
+            <h4 className="font-bold text-yellow-600 mb-2">Single Order</h4>
+            <ul className="list-disc list-inside space-y-1">
+              <li>🚚 Delivery charge: ₹20 – ₹30</li>
+              <li>⏰ Orders accepted until 9:30 PM daily</li>
+              <li>💬 WhatsApp us to confirm slot availability</li>
+              <li>⚠️ Delays possible during peak hours</li>
+            </ul>
+          </div>
+        </div>
+        <p className="text-xs text-gray-500 mt-6">
+          For queries, reach us anytime via <a href="https://wa.me/919998258966" className="text-green-600 underline">WhatsApp</a>.
+        </p>
+      </div>
+    </section>
+
       <footer className="bg-green-100 py-8 text-center">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
           <div className="text-center">
