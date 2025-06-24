@@ -193,7 +193,7 @@ const menuData = [
       },
       {
         name: "Power Dry Fruit",
-        ingredients: "Mixed Dry Fruits, Banana, Oats, Milk",
+        ingredients: "Mixed Dry Fruits, Banana, Milk",
         img: DryFruShImg,
         price: "₹89",
         nutrients: "Healthy Fats, Protein, Potassium, Complex Carbs",
@@ -201,7 +201,7 @@ const menuData = [
       },
       {
         name: "Apple Crunch",
-        ingredients: "Apple, Peanut Butter, Flaxseeds, Almond Milk",
+        ingredients: "Apple, Almond Milk",
         img: AppleCrunImg,
         price: "₹79",
         nutrients: "Fiber, Vitamin E, Magnesium, Plant Protein",

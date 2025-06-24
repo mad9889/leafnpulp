@@ -19,8 +19,9 @@ import {
   FaStar,
   FaTruck,
   FaYoutube,
+  FaBox,
 } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
+import { FaSquareXTwitter, FaWineBottle } from "react-icons/fa6";
 
 const packagesData = [
   {
@@ -262,8 +263,8 @@ export default function GreenBiteLandingPage() {
           <div className="p-4">
             <div className="flex justify-between items-start mb-2">
               <h3 className="font-bold text-lg">{item.name}</h3>
-              <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">
-                {item.price || "₹149"}
+              <span className="bg-green-100 text-green-800 text-sm px-2 py-1 rounded-full">
+                {item.price}
               </span>
             </div>
             <p className="text-sm text-gray-600 mb-3">{item.ingredients}</p>
@@ -350,7 +351,7 @@ export default function GreenBiteLandingPage() {
           </div>
 
           {/* Packages Grid */}
-          <div className="grid md:grid-cols-3 gap-6 w-full max-w-6xl">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-6xl">
             {packagesData
               .find((pkg) => pkg.category === selectedPack)
               ?.items.map((item, idx) => (
@@ -379,12 +380,12 @@ export default function GreenBiteLandingPage() {
       <section className="bg-green-50 py-12 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h3 className="text-3xl font-bold mb-8 bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent">
-            Pure & Powerful Nutrition
+            Why Choose Leaf & Pulp
           </h3>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Every ingredient carefully selected for maximum health benefits
+            From nutrition to sustainability – here’s how we care for your health and the planet.
           </p>
-          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {/* No Sugar Card */}
             <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
               <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -399,55 +400,57 @@ export default function GreenBiteLandingPage() {
               </span>
             </div>
 
-            {/* 100% Natural Card */}
-            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaLeaf className="text-green-500 text-2xl" />
-              </div>
-              <h4 className="font-bold mb-2 text-lg">Farm to Bottle</h4>
-              <p className="text-sm text-gray-600 mb-3">
-                Cold-pressed within 4 hours of harvesting
-              </p>
-              <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">
-                48-hour freshness guarantee
-              </span>
-            </div>
-
-            {/* Nutrition Card */}
+            {/* Bottle Card */}
             <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaHeart className="text-blue-500 text-2xl" />
+                <FaWineBottle className="text-blue-600 text-2xl" />
               </div>
-              <h4 className="font-bold mb-2 text-lg">Nutrient Lock</h4>
+              <h4 className="font-bold mb-2 text-lg">Glass Bottles</h4>
               <p className="text-sm text-gray-600 mb-3">
-                High-pressure processed to preserve 98% nutrients
+                All juices are delivered in clean, reusable glass bottles – no single-use plastic!
               </p>
               <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">
-                Lab-tested
+                No plastic
               </span>
             </div>
 
-            {/* Sustainability Card */}
+            {/* Boxes Card */}
             <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
               <div className="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <FaRecycle className="text-yellow-500 text-2xl" />
+                <FaBox className="text-yellow-600 text-2xl" />
               </div>
-              <h4 className="font-bold mb-2 text-lg">Eco-Conscious</h4>
+              <h4 className="font-bold mb-2 text-lg">Food-Safe Plastic Boxes</h4>
               <p className="text-sm text-gray-600 mb-3">
-                100% biodegradable packaging
+                Our salads and meals come in BPA-free, recyclable food containers.
               </p>
               <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">
-                Carbon-neutral
+                BPA-Free
               </span>
             </div>
+
+        {/* Return Card */}
+            <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                 <FaRecycle className="text-blue-600 text-2xl" />
+              </div>
+              <h4 className="font-bold mb-2 text-lg">Return for Reuse</h4>
+              <p className="text-sm text-gray-600 mb-3">
+                Return bottle and box for hygiene-safe reuse.
+              </p>
+              <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">
+                Reuse
+              </span>
+            </div>
+
           </div>
 
+        </div>
+      </section>
           {/* Trust Indicators */}
-          {/* Replace current trust indicators with this */}
-          <div className="mt-12">
-            <h4 className="text-lg font-semibold mb-6 text-green-700">
-              Why Customers Love Us
-            </h4>
+          <div className="py-12 mx-auto px-4 bg-white mt-5">
+            <h3 className="text-2xl font-bold mb-8 bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent text-center">
+            Why Customers Love Us
+          </h3>
 
             <Slider
               {...{
@@ -465,24 +468,17 @@ export default function GreenBiteLandingPage() {
                 {
                   icon: <FaStar className="text-yellow-400 text-3xl mb-3" />,
                   title: "4.9/5 Stars",
-                  text: "100+ happy customers",
+                  text: "Loved by 100+ happy customers",
                 },
                 {
                   icon: <FaTruck className="text-green-500 text-3xl mb-3" />,
                   title: "Free Delivery",
-                  text: "Around 4km Range ",
+                  text: "Within 4km of our store",
                 },
                 {
                   icon: <FaShieldAlt className="text-blue-500 text-3xl mb-3" />,
-                  title: "Certified Quality",
-                  text: "FSSAI Approved",
-                },
-                {
-                  icon: (
-                    <FaRecycle className="text-emerald-500 text-3xl mb-3" />
-                  ),
-                  title: "Eco-Friendly",
-                  text: "Sustainable packaging",
+                  title: "FSSAI Certified",
+                  text: "Quality and safety you can trust",
                 },
                 {
                   icon: <FaLeaf className="text-green-600 text-3xl mb-3" />,
@@ -491,7 +487,7 @@ export default function GreenBiteLandingPage() {
                 },
               ].map((item, i) => (
                 <div key={i} className="px-4">
-                  <div className="bg-white p-6 rounded-xl shadow-sm text-center h-full">
+                  <div className="bg-green-50 p-6 rounded-xl shadow-sm text-center h-full">
                     <div className="mx-auto w-max">{item.icon}</div>
                     <h5 className="font-bold text-lg mb-1">{item.title}</h5>
                     <p className="text-gray-600">{item.text}</p>
@@ -500,8 +496,36 @@ export default function GreenBiteLandingPage() {
               ))}
             </Slider>
           </div>
+
+<section className="py-12 px-4 bg-green-50">
+      <div className="max-w-4xl mx-auto text-center">
+        <h3 className="text-2xl font-bold text-green-700 mb-6">Delivery & Service Terms</h3>
+        <div className="grid sm:grid-cols-2 gap-6 text-left text-sm text-gray-700">
+          <div className="bg-green-100 p-4 rounded-xl shadow-sm">
+            <h4 className="font-bold text-green-600 mb-2">With Subscription</h4>
+            <ul className="list-disc list-inside space-y-1">
+              <li>✅ Free delivery on all subscription orders</li>
+              <li>📦 Choose daily, weekly or custom plans</li>
+              <li>📍 Service available within 3-4 km of location</li>
+              <li>🕒 Delivery between 7 AM – 10 AM</li>
+            </ul>
+          </div>
+          <div className="bg-yellow-50 p-4 rounded-xl shadow-sm">
+            <h4 className="font-bold text-yellow-600 mb-2">Single Order</h4>
+            <ul className="list-disc list-inside space-y-1">
+              <li>🚚 Delivery charge: ₹20 – ₹30</li>
+              <li>⏰ Orders accepted until 9:30 PM daily</li>
+              <li>💬 WhatsApp us to confirm slot availability</li>
+              <li>⚠️ Delays possible during peak hours</li>
+            </ul>
+          </div>
         </div>
-      </section>
+        <p className="text-xs text-gray-500 mt-6">
+          For queries, reach us anytime via <a href="https://wa.me/919998258966" className="text-green-600 underline">WhatsApp</a>.
+        </p>
+      </div>
+    </section>
+
 
       {/* Scroll to Top Button */}
       {showTopBtn && (
@@ -543,35 +567,6 @@ export default function GreenBiteLandingPage() {
           </div>
         </div>
       </section> 
-
-      <section className="py-12 px-4 bg-white border-t">
-      <div className="max-w-4xl mx-auto text-center">
-        <h3 className="text-2xl font-bold text-green-700 mb-6">Delivery & Service Terms</h3>
-        <div className="grid sm:grid-cols-2 gap-6 text-left text-sm text-gray-700">
-          <div className="bg-green-50 p-4 rounded-xl shadow-sm">
-            <h4 className="font-bold text-green-600 mb-2">With Subscription</h4>
-            <ul className="list-disc list-inside space-y-1">
-              <li>✅ Free delivery on all subscription orders</li>
-              <li>📦 Choose daily, weekly or custom plans</li>
-              <li>📍 Service available within 3-4 km of location</li>
-              <li>🕒 Delivery between 7 AM – 10 AM</li>
-            </ul>
-          </div>
-          <div className="bg-yellow-50 p-4 rounded-xl shadow-sm">
-            <h4 className="font-bold text-yellow-600 mb-2">Single Order</h4>
-            <ul className="list-disc list-inside space-y-1">
-              <li>🚚 Delivery charge: ₹20 – ₹30</li>
-              <li>⏰ Orders accepted until 9:30 PM daily</li>
-              <li>💬 WhatsApp us to confirm slot availability</li>
-              <li>⚠️ Delays possible during peak hours</li>
-            </ul>
-          </div>
-        </div>
-        <p className="text-xs text-gray-500 mt-6">
-          For queries, reach us anytime via <a href="https://wa.me/919998258966" className="text-green-600 underline">WhatsApp</a>.
-        </p>
-      </div>
-    </section>
 
       <footer className="bg-green-100 py-8 text-center">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
