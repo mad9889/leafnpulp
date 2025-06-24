@@ -351,7 +351,7 @@ export default function GreenBiteLandingPage() {
           </div>
 
           {/* Packages Grid */}
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-6xl">
+          <div className="grid min-[475px]:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-6xl">
             {packagesData
               .find((pkg) => pkg.category === selectedPack)
               ?.items.map((item, idx) => (
